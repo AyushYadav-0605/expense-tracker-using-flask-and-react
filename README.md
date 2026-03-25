@@ -1,23 +1,36 @@
-## Assignment submission guidelines
+#  Full-Stack Expense Tracker & Analytics Dashboard
 
-1. Find **atleast 5 issues** in the code base (Frontend and/or Backend)
-2. Record a video sharing your screen and turning on your video to explain how did you go about solving the assignment.
-3. Submit this form - https://forms.gle/AK9U6VjnuDFRS7R36
+A robust financial management application featuring a **Flask (Python) REST API** and a **React (Vite)** frontend. This project demonstrates the integration of relational databases with modern frontend data visualization.
 
 
-### Evaluation Criteria
-- How have you reached at the bugs?
-- Quality of your solutions
-- After resolving all the bugs, the dashboard should look something like this - https://drive.google.com/file/d/1s07a-L_rAT8OgFg28D3gp-stxJJUHdd2/view?usp=sharing
 
+##  Tech Stack
+- **Frontend:** React.js, Vite, Recharts (Data Viz), CSS3
+- **Backend:** Python, Flask, SQLAlchemy (ORM)
+- **Database:** MySQL / SQLite
+- **Tooling:** Git, REST API Testing
 
-## Expense tracker (assignment)
+##  Technical Highlights: The "Refactor"
+I took an existing baseline and performed a deep-dive technical audit to resolve several critical architectural bottlenecks:
+- **Pagination Logic:** Refactored the backend SQL offset calculations to ensure 100% data visibility across paginated views.
+- **Data Synchronization:** Resolved JSON key mismatches between the Flask API and React hooks to enable seamless monthly trend reporting.
+- **Type-Safe Calculations:** Fixed JavaScript floating-point errors by implementing strict number casting for expense totals.
+- **Soft-Delete Implementation:** Optimized the database query layer to correctly filter "deleted" records from the UI without losing historical data integrity.
 
-Flask API + React (Vite). MySQL for data.
+##  Getting Started
 
-Setup details are intentionally minimal — get the backend and frontend running, fix what breaks, and wire the app end-to-end.
+### Backend
+1. `cd backend`
+2. `python -m venv venv && source venv/bin/activate`
+3. `pip install -r requirements.txt`
+4. `python app.py`
 
-- **backend/** — Flask application  
-- **frontend/** — React application  
+### Frontend
+1. `cd frontend`
+2. `npm install`
+3. `npm run dev`
 
-Setup the database and environment variables to connect.
+##  Future Roadmap
+- [ ] Implement JWT-based User Authentication.
+- [ ] Add CSV/PDF export functionality for monthly reports.
+- [ ] Deploy to AWS/Render for live production access.
